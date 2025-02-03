@@ -3,11 +3,14 @@ from .models import *
 from .serializer import *
 from rest_framework import views
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
 from rest_framework.generics import ListCreateAPIView, RetrieveUpdateDestroyAPIView
 from rest_framework import status
 from rest_framework.permissions import IsAuthenticated
+
+
 @api_view(['GET', 'POST'])
+@permission_classes([IsAuthenticated])
 def listar_professores(request):
     if request.method == 'GET':
         queryset = Cadastro.objects.all() #captura todos os dados da tabela cadastro. Isso não se faz no POST, por isso nele não há essa linha
@@ -36,5 +39,6 @@ class ProfessoresView(ListCreateAPIView): #o objetivo dessa classe é deixar com
 class ProfessoresDetailView(RetrieveUpdateDestroyAPIView):
     queryset = Cadastro.objects.all()
     serializer_class = CadastroSerializer
+    permission_classes = [IsAuthenticated]
 
 
