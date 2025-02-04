@@ -1,0 +1,22 @@
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+
+.btn-lista{
+    display: flex;
+    padding-left: 30px;
+    column-gap: 30px;
+}
+ 
+.btn-icons{
+    font-size: 50px;
+}
+
+button{
+    border: 1px solid;
+    background-color: aqua;
+}
