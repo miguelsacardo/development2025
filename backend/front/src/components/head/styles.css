@@ -1,0 +1,27 @@
+.container_head{
+    background-color: black;
+    color: white;
+    display: flex;
+    width: 75vw;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    box-shadow: 0 5px 15px rgba(0,0,0, 0.3);
+}
+
+.title{
+    display: flex;
+    width: 50vw;
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    
+}
+.nav{
+    display: flex;
+    width: 50vw;
+    height: 100px;
+    align-items: center;
+    justify-content: space-around;
+
+}
