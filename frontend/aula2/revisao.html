@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 2</title>
+</head>
+<body>
+    <h1>Revisão 1 aula</h1>
+    <script>
+        // Alert - eu mando, o usuário só pode dar OK e somente depois o html é executado
+        window.alert("Olá mundo, estou quebrando uma maldição"); // boa prática
+        alert("Olá, eu sou um alert, eu mando e o usuário da ok");
+
+        // prompt - seria um input do python, serve para obter valores do usuário
+        window.prompt("Qual a sua meta para esse 2 semestre no senai:");
+
+        // confirm - ele dá duas opções ao usuário, uma de ok e outra de cancelar
+        confirm("Você ganhaá o prêmio de aluno ouro, né?");
+
+        // variáveis
+        // let -> valores flexiveis dentro de um escopo
+        // const -> constante, valores fixos
+        // var -> forma antiga de fazer declarações, mas não é boa prática
+
+        // laços de repetição
+        // for
+        // while
+        // do while
+        for(let i = 10; i > 0; i--){
+            document.write(`Número ${i} <br/>`)
+            console.log(i);
+        }
+
+        // while
+        let contador = 100
+        while(contador > 0){
+            document.write(`Contador ${contador} <br/>`)
+            contador -= 10;
+        }
+
+        // do while : quando quero que uma instrução seja executada pelo menos uma vez
+        let a = 1
+        do{
+            if(a % 2 == 0){
+                document.write(`O número ${a} é par <br/>`)
+            }else{
+                document.write(`O número ${a} é ímpar <br/>`)
+            }
+
+            a++
+        }while(a <= 20);
+
+        // switch case: quando eu tenho multipla escolha
+        let operacoes = Number(prompt("Escolha sua operação 1 - Soma 2 - Subtração 3 - Multiplicação e 4 - Divisão"))
+        let numero1 = Number(prompt("Informe um número"))
+        let numero2 = Number(prompt("Informe um número"))
+        switch(operacoes){
+            case 1:
+                soma = numero1 + numero2
+                document.write(`A soma é ${soma}`)
+                break
+            
+            case 2:
+                subtracao = numero1 - numero2
+                document.write(`A subtração é ${subtracao}`)
+                break
+
+            case 3:
+                multiplicacao = numero1 * numero2
+                document.write(`A multiplicação é ${multiplicacao}`)
+                break
+
+            case 4:
+                divisao = numero1 / numero2
+                document.write(`A divisão é ${divisao}`)
+                break
+
+            default:
+                document.write("Caro usuário, sua opção é inválida! Por favor informe novamente.")
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aula 2 Exercicios</title>
+  </head>
+  <body>
+    <script>
+      //   // calcular a diferença entre 2 números
+      //   let num1 = Number(window.prompt("Informe o primeiro número"));
+      //   let num2 = Number(window.prompt("Informe o segundo número"));
+      //   diferenca = num1 - num2;
+      //   document.write(`A diferença entre os dois números é: ${diferenca}<br/>`);
+
+      //   // verificar se um número é par
+      //   let numero_qualquer = Number(
+      //     window.prompt("Informe um número para ser checado se é par ou ímpar")
+      //   );
+      //   if (numero_qualquer % 2 == 0) {
+      //     document.write(`O número (${numero_qualquer}) informado é par.<br/>`);
+      //   } else {
+      //     document.write(`O número (${numero_qualquer}) informado é ímpar.<br/>`);
+      //   }
+
+      //   // solicite 2 notas e veja se o 1 é multiplo do segundo
+      //   let nota1 = Number(window.prompt("Informe a primeira nota"));
+      //   let nota2 = Number(window.prompt("Informe a segunda nota"));
+      //   if (nota1 < nota2) {
+      //     if (nota2 % nota1 == 0) {
+      //       document.write(`A nota ${nota2} é multiplo da nota ${nota1}<br/>`);
+      //     } else {
+      //       document.write(`As notas informadas não são multiplos.<br/>`);
+      //     }
+      //   } else {
+      //     if (nota1 % nota2 == 0) {
+      //       document.write(`A nota ${nota1} é multiplo da nota ${nota2}<br/>`);
+      //     } else {
+      //       document.write(`As notas informadas não são multiplos.<br/>`);
+      //     }
+      //   }
+
+      //   // converta uma temperatura em celcius para fahrenheit
+      //   let temperatura_celcius = Number(
+      //     window.prompt(
+      //       "Digite uma temperatura em Celcius para ser convertida para Fahrenheit"
+      //     )
+      //   );
+      //   fahrenheit = (temperatura_celcius * 9) / 5 + 32;
+      //   document.write(
+      //     `A temperatura Celsius convertida para fahrenheit é ${fahrenheit}°F<br/>`
+      //   );
+
+      //   // calcule a área (base * altura)
+      //   let base = Number(window.prompt("Insira uma medida para a base"));
+      //   let altura = Number(window.prompt("Insira uma medida para a altura"));
+      //   area = base * altura;
+      //   document.write(`A medida da área é ${area}<br/>`);
+
+      //   // solicite duas notas ao usuário e informe se está acima da média e, se é
+      //   // uma nota par, e mostre o resultado ao usuário
+      //   window.alert(
+      //     "Solicite duas notas ao usuário e informe se está acima da média, e se é uma nota par, e mostre o resultado ao usuário."
+      //   );
+      //   let primeira_nota = Number(window.prompt("Informe a primeira nota"));
+      //   let segunda_nota = Number(window.prompt("Informe a segunda nota"));
+      //   if (primeira_nota > 5) {
+      //     if (primeira_nota % 2 == 0) {
+      //       document.write(
+      //         `A nota ${primeira_nota} está acima da média e é par.<br/>`
+      //       );
+      //     }
+      //   } else {
+      //     if (primeira_nota % 2 == 0) {
+      //       document.write(
+      //         `A nota ${primeira_nota} está abaixo da média e é par.<br/>`
+      //       );
+      //     }
+      //   }
+
+      //   if (segunda_nota > 5) {
+      //     if (segunda_nota % 2 == 0) {
+      //       document.write(
+      //         `A nota ${segunda_nota} está acima da média e é par.<br/>`
+      //       );
+      //     }
+      //   } else {
+      //     if (segunda_nota % 2 == 0) {
+      //       document.write(
+      //         `A nota ${segunda_nota} está abaixo da média e é par.<br/>`
+      //       );
+      //     }
+      //   }
+
+      //   // Solicite o peso e a altura de uma pessoa e calcule o IMC( peso/altura²).
+      //   // Apresente o resultado ao usuário.
+      //   window.alert("Solicite o peso e a altura de uma pessoa e calcule o IMC( peso/altura²). Apresente o resultado ao usuário.")
+      //   let peso_pessoa = Number(window.prompt("Informe seu peso"))
+      //   let altura_pessoa = Number(window.prompt("Informe sua altura"))
+      //   imc = peso_pessoa/altura_pessoa**2
+      //   document.write(`Seu IMC é ${imc}<br/>`)
+
+      //   // Verifique se um ano é bissexto.
+      //   window.alert("Verifique se um ano é bissexto.")
+      //   let ano = Number(window.prompt("Informe um ano"))
+      //   if(ano % 4 == 0){
+      //     document.write(`O ano ${ano} é bissexto.<br/>`)
+      //   }else{
+      //     document.write(`O ano ${ano} não é bissexto.<br/>`)
+      //   }
+
+      //   // Solicite ao usuário uma taxa de câmbio, e um valor desejado,
+      //   // exiba quanto ficaria esse valor convertido com a taxa.
+      //   window.alert("Solicite ao usuário uma taxa de câmbio, e um valor desejado, exiba quanto ficaria esse valor convertido com a taxa. ")
+      //   let taxa_cambio = window.prompt("Informe uma taxa de câmbio").replace(",",".")
+      //   let valor_desejado = window.prompt("Informe um valor desejado para ser convertido").replace(",",".")
+      //   conversao = Number(taxa_cambio) * (valor_desejado)
+      //   document.write(`O valor ${valor_desejado} convertido com taxa de ${taxa_cambio} ficará ${conversao}<br/>`)
+
+        // 10) Pedir um número ao usuário de 1 a 9, e imprima a tabuada desse valor.
+      //   alert("Pedir um número ao usuário de 1 a 9, e imprima a tabuada desse valor.")
+      //   let numero_usuario = Number(window.prompt("Informe um número de 1 a 9 para ser feito sua tabuada"))
+      //   if(numero_usuario < 1 || numero_usuario > 9){
+      //     alert("Informe um número de 1 a 9.")
+      //   }else{
+      //     let i = 0
+      //     while(i <= 10){
+      //         document.write(`Tabuada ${numero_usuario} * ${i} = ${numero_usuario * i}<br/>`)
+      //         i++
+      //     }
+      //   }
+
+        // Neste exercício, você vai simular um jogo de "Pedra, papel e tesoura" contra o computador.
+      //   alert("Simulação de um jogo de pedra papel e tesoura")
+      //   let opcao_computador = Math.floor(Math.random() * 3)
+      //   let opcao_jogador = Number(window.prompt("Informe seu movimento 0 - Pedra | 1 - Papel | 2 - Tesoura"))
+
+      //   switch(opcao_jogador){
+      //     case 0:
+      //         opcao_jogador = "pedra"
+      //         break
+      //     case 1:
+      //         opcao_jogador = "papel"
+      //         break
+      //     case 2:
+      //         opcao_jogador = "tesoura"
+      //         break
+      //     default:
+      //         alert("Digite um valor válido, jogador!")
+      //   }
+
+      //   switch (opcao_computador){
+      //     case 0:
+      //         opcao_computador = "pedra"
+      //         break
+      //     case 1:
+      //         opcao_computador = "papel"
+      //         break
+      //     case 2:
+      //         opcao_computador = "tesoura"
+      //         break
+      //     default:
+      //         alert("Houve um erro.")
+      //   }
+
+      //   if (opcao_jogador == opcao_computador){
+      //     document.write(`Empate! Jogador: ${opcao_jogador}<br/> Computador: ${opcao_computador}`)
+      //   }else if(opcao_jogador == "pedra" && opcao_computador == "tesoura"){
+      //     document.write(`VITÓRIA DO JOGADOR! Jogador: ${opcao_jogador}<br/> Computador: ${opcao_computador}`)
+      //   }else if(opcao_jogador == "papel" && opcao_computador == "pedra"){
+      //     document.write(`VITÓRIA DO JOGADOR! Jogador: ${opcao_jogador}<br/> Computador: ${opcao_computador}`)
+      //   }else if(opcao_jogador == "tesoura" && opcao_computador == "papel"){
+      //     document.write(`VITÓRIA DO JOGADOR! Jogador: ${opcao_jogador}<br/> Computador: ${opcao_computador}`)
+      //   }else{
+      //     document.write(`VITÓRIA DO COMPUTADOR! Computador: ${opcao_computador} <br/> Jogador: ${opcao_jogador}`)
+      //   }
+
+      // Neste exercício, você precisa criar um programa que calcula o fatorial de um número.
+      // let numero_input = Number(window.prompt("Informe o número que você deseja saber o fatorial"))
+      // let fatorial = 1
+      // let i = 1
+
+      // while(i <= numero_input){
+      //     fatorial *= i
+      //     i += 1
+      // }
+      // document.write(`O fatorial de ${numero_input} é ${fatorial}`)
+
+      let palavra = window.prompt("Digite a palavra que será utilizada no jogo")
+      let letras_chutatas = window.prompt("chute uma letra")
+      const chances = 5
+      let ganhou = false
+
+      for(let i = 0; i < palavra.length(); i++ ){
+        if(letras_chutatas == palavra[i]){
+            window.write()
+        }
+      }
+
+      
+    </script>
+  </body>
+</html>
