@@ -5,12 +5,17 @@ import { CgAdd } from "react-icons/cg";
 import { CiSearch } from "react-icons/ci";
 import "./style.css";
 import ModalProfessores from "../modal";
+import Head from "../head";
+import Footer from "../footer";
 
 export default function Home() {
   const [dados, setDados] = useState([]);
   const [modalOpen, setModalOpen] = useState(false);
   const token = localStorage.getItem("token");
   const [professorSelecionado, setProfessorSelecionado] = useState(null);
+
+  const [texto, setTexto] = useState('')
+  const [id, setid] = useState('')
 
   useEffect(() => {
     if (!token) return;
@@ -99,9 +104,43 @@ export default function Home() {
     } catch (error) {}
   };
 
+  const search = async (texto)=>{
+      try {
+        const response = await axios.get(
+          `http://127.0.0.1:8000/api/search/?search=${texto}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          }
+        );
+        
+        setProfessorSelecionado(response.data[0])
+      } catch (error) {
+        console.error(error)
+      }
+  }
+  const searchById = async (id)=>{
+      try {
+        const response = await axios.get(
+          `http://127.0.0.1:8000/api/id/${id}`,
+          {
+            headers: {
+              Authorization: `Bearer ${token}`
+            }
+          }
+        );
+        
+        setProfessorSelecionado(response.data)
+      } catch (error) {
+        console.error(error)
+      }
+  }
+
   return (
     <>
       <div>
+        <Head/>
         <ul>
           {dados.map((professor) => (
             <div className="content">
@@ -135,10 +174,13 @@ export default function Home() {
         </button>
 
         <div>
-          <input />
+          <input 
+          value={texto}
+          onChange={(e) =>{setTexto(e.target.value); setid(e.target.value)}}
+          />
         </div>
         <div>
-          <CiSearch className="procurar" />
+          <CiSearch className="procurar" onClick={()=>{searchById(id), search(texto), setModalOpen(true)}}/>
         </div>
 
         <ModalProfessores
@@ -149,6 +191,7 @@ export default function Home() {
           criar={criar}
           atualizar={atualizar}
         />
+        <Footer/>
       </div>
       {/* buttons */}
     </>

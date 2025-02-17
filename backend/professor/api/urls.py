@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import listar_professores, ProfessoresView, ProfessoresDetailView
+from .views import listar_professores, ProfessoresView, ProfessoresDetailView, buscar_nome_professor, ProfessoresSearchView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -14,5 +14,8 @@ urlpatterns = [
     # isso eu também pego no site. É necessário olhar os códigos da sessão "Project Configuration" e ver onde eles devem ser colocados
     path('token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
+
+    path('buscar/nome/', buscar_nome_professor),
+    path('search/', ProfessoresSearchView.as_view()),
 ]
 
