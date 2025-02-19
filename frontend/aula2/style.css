@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    padding: 20px;
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: cadetblue;
+    background-size: cover; /* posicionando utilizando 100% do vh */
+}
+
+.container{
+    width: 700px;
+    padding: 20px;
+    background-color: rgba(244, 244, 244, 0.8);
+    border-radius: 10px;
+    box-shadow: 0px, 4px, 8px rgba(0, 0, 0, 0.1);
+}
+
+h1{
+    color: #dfb837;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.menu, .quantidade{
+    margin: 20px, 0;
+}
+
+.select, input[type='number']{
+    padding: 10px, 20px;
+    font-size: 16px;
+    margin-left: 20px;
+}
+
+button{
+    padding: 10px, 20px;
+    font-size: 16px;
+    background-color: #dfb837;
+    color: azure;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: bisque;
+}
+
+#resultado{
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+}

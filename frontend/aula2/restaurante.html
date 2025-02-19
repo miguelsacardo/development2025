@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurante</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="menu">
+            <label for="">Escolha um prato:</label> <!-- rótulo -->
+            <select name="" id="pratos">
+                <option value="0">Selecione um prato</option>
+                <option value="">Lasanha - R$40,00</option>
+                <option value="">Strogonoff - R$45,00</option>
+                <option value="">Contra Filé com fritas - R$56,00</option>
+            </select>
+
+        </div>
+        <div class="quantidade">
+            <label for="">Quantidade: </label>
+            <input type="number" id="quantidade" min="1" max="10" required>
+        </div>
+        <button onclick="calcularTotal()">Calcular total</button>
+        <p id="resultado"></p>
+    </div>
+    <script src="scriptRestaurante.js"></script>
+</body>
+</html>
