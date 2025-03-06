@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segunda lista de exercicios</title>
+</head>
+<body>
+    <script>
+        // // Faça uma calculadora usando o conceito de Arrow Function
+
+        // // criacao das funcoes
+        // const somar = (v1, v2) => v1 + v2
+        // const subtrair = (v1, v2) => v1 - v2
+        // const dividir = (v1, v2) => v1 / v2
+        // const multiplicar = (v1, v2) => v1 * v2
+
+        // // executando o exercicio
+        // window.alert("Calculadora usando arrow function!")
+        // let num1 = Number(window.prompt("Informe o primeiro numero!"))
+        // let num2 = Number(window.prompt("Informe o segundo numero!"))
+        // let operation = window.prompt("Informe uma operacao: [+]Somar\n[-]Subtrair\n[/]Dividir\n[*]Multiplicar")
+
+        // switch(operation){
+        //     case "+":
+        //         document.write(`O resultado da soma dos dois numeros e ${somar(num1,num2)}`)
+        //         break;
+        //     case "-":
+        //         document.write(`O resultado da subtracao dos dois numeros e ${subtrair(num1,num2)}`)
+        //         break;
+        //     case "/":
+        //         document.write(`O resultado da divisao dos dois numeros e ${dividir(num1,num2)}`)
+        //         break;
+        //     case "*":
+        //         document.write(`O resultado da multiplicacao dos dois numeros e ${multiplicar(num1, num2)}`)
+        //         break;
+        //     default:
+        //         document.alert("Informe uma operacao valida!")
+        //         break;
+        // }
+
+        // // Inverta uma string informada pelo usuário
+        // window.alert("Invertendo string fornecida pelo usuario!")
+
+        // // pedindo string ao usuario
+        // const palavra_usuario = window.prompt("Informe uma palavra!")
+
+        // for(let i = palavra_usuario.length - 1; i >= 0; i--){
+        //     document.write(palavra_usuario[i])  
+        // }
+
+        // // Pedir um nome e imprimir cada letra separadamente.
+        // window.alert("Pedir um nome e imprimir cada letra separadamente!")
+
+        // // pedindo o nome
+        // const nome = window.prompt("Informe um nome!")
+        // for(let i = 0; i < nome.length; i++){
+        //     document.write(`${nome[i]}<br/>`)
+        // }
+
+        // // Pedir uma idade e dizer se a pessoa pode tirar carteira de motorista.
+        // window.alert("Pedir uma idade e dizer se a pessoa pode tirar carteira de motorista!")
+
+        // //pedindo a idade
+        // const idade = Number(window.prompt("Informe sua idade!"))
+
+        // // verificando se a pessoa pode tirar ou nao a carteira de motorista
+        // if(idade >= 18){
+        //     window.alert("Parabens, voce pode tirar sua carteira de motorista!")
+        // }else{
+        //     window.alert("Voce nao pode tirar a carteira de motorista!")
+        // }
+
+        // //Criar um programa que peça três números e exiba-os em ordem crescente.
+        // window.alert("Criar um programa que peça três números e exiba-os em ordem crescente!")
+        // let numero_maior = null;
+        // let numero_menor = null;
+        // let numero_meio = null;
+        // // pedindo os numeros
+        // let i = 1;
+        // while(i <= 3){
+        //     let numeros = Number(window.prompt("Informe o primeiro numero!"))
+
+        //     if(numero_maior == null && numero_meio == null && numero_menor == null){
+        //         numero_maior = numeros
+        //         numero_menor = numeros
+        //         numero_meio = numeros
+        //     }
+        //     if(numeros > numero_maior){
+        //         numero_maior = numeros
+        //     }
+        //     if(numeros < numero_menor){
+        //         numero_menor = numeros
+        //     }
+        //     if(numeros < numero_maior && numeros > numero_menor){
+        //         numero_meio = numeros
+        //     }
+            
+        //     i++;
+        // }
+
+        // document.write(`${numero_menor},${numero_meio},${numero_maior}`)
+
+        // // Criar um programa que converta horas para minutos.
+        // const converterHorasParaMinutos = (valor_horario) => valor_horario * 60
+
+        // window.alert("Criar um programa que converta horas para minutos")
+
+        // // pedindo a hora para o usuario
+        // let hora = Number(window.prompt("Informe uma hora!"))
+
+        // document.write(`O valor da hora convertida para minutos e ${converterHorasParaMinutos(hora)}`)
+
+        // Criar um programa que peça um valor e exiba quantas 
+        // cédulas de R$200, R$100, R$50, R$20, R$10, R$5 e R$1 seriam necessárias para formar esse valor.
+        window.alert("Criar um programa que peça um valor e exiba quantas cédulas de R$200, R$100, R$50, R$20, R$10, R$5 e R$1 seriam necessárias para formar esse valor.")
+
+        // vetor com as cedulas que serao calculadas
+        const notas = [100, 50, 20, 10, 5, 1]
+
+        // pedindo valor ao usuario
+        let valor = parseInt(window.prompt("Informe um valor!"))
+        document.write(valor)
+
+        for(let nota of notas){
+            let quantidade_notas = parseInt(valor / nota)
+            document.write(`<br/>${quantidade_notas} nota(s) de R$ ${nota},00`) 
+            valor = valor % nota
+        }
+
+        
+    
+
+    </script>
+</body>
+</html>
