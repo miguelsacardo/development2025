@@ -18,7 +18,7 @@ const ModalProfessores = ({
   // - Se `professorSelecionado` não for definido ou não tiver um `id`, o estado será um array com uma string vazia (['']).
   // Isso permite que o estado 'id' seja configurado de acordo com a seleção do professor.
 
-  const [ni, setNi] = useState(professorSelecionado?.ni || "");
+  const [ni, setNi] = useState(professorSelecionado?.ni || ""); // ? -> serve para checar se "professorSelecionado" não é undefined, e caso não for, pega determinado atributo
   const [nome, setNome] = useState(professorSelecionado?.nome || "");
   const [email, setEmail] = useState(professorSelecionado?.email || "");
   const [cel, setCel] = useState(professorSelecionado?.cel || "");
