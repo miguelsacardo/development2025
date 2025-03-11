@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import listar_professores, ProfessoresView, ProfessoresDetailView, buscar_nome_professor, ProfessoresSearchView
+from .views import listar_professores, ProfessoresView, ProfessoresDetailView, buscar_nome_professor, ProfessoresSearchView, DisciplinasView, DisciplinasDetailView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -17,5 +17,9 @@ urlpatterns = [
 
     path('buscar/nome/', buscar_nome_professor),
     path('search/', ProfessoresSearchView.as_view()),
+
+    # exercicio - fazer o cadasto de disciplina (urls)
+    path('disciplinas', DisciplinasView.as_view()),
+    path('disciplinas/id/<int:pk>', DisciplinasDetailView.as_view()),
 ]
 
