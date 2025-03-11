@@ -66,14 +66,19 @@ class ProfessoresSearchView(ListAPIView):
     search_fields = ['nome']
 
 
+# aqui seria uma ótima prática separar por pastas, mas como é um exercicio pequeno e para treino, quis deixar tudo junto
 # exercicio - fazer o cadasto de disciplina (views)
 class DisciplinasView(ListCreateAPIView): # o objetivo dessa classe é deixar como um formulário para podermos preencher
     queryset =  CadastroDisciplina.objects.all()
     serializer_class = CadastroDisciplinaSerializer
-    # permission_classes = [IsAuthenticated]
+
+    # autenticação para fazer a requisição
+    permission_classes = [IsAuthenticated]
 
 # acessa mais métodos que o ListCreateAPIView
 class DisciplinasDetailView(RetrieveUpdateDestroyAPIView):
     queryset = CadastroDisciplina.objects.all()
     serializer_class = CadastroDisciplinaSerializer
-      # permission_classes = [IsAuthenticated]
+
+    # autenticação para fazer a requisição
+    permission_classes = [IsAuthenticated]

@@ -1,5 +1,6 @@
 import React from "react";
 import './styles.css'
+import { Link } from "react-router"
 
 export default function Head(){
     return(
@@ -12,6 +13,7 @@ export default function Head(){
                 <span>Read</span>
                 <span>Update</span>
                 <span>Delete</span>
+                <span><Link to="/subjects">aaaaaaaaaaaaaa</Link></span>
             </div>
         </div>
     )

@@ -1,0 +1,13 @@
+.buttons{
+    display: flex;
+    justify-content: center;
+    column-gap: 20px;
+}
+
+.content_area{
+    color: white;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: cadetblue;
+    padding: 10px 10px 20px 10px;
+}
