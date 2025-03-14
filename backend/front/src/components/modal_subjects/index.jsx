@@ -32,7 +32,7 @@ const ModalDisciplinas = ({
             setCargaHoraria("")
         }
     }, [disciplinaSelecionada])
-
+    
     const handleSubmit = (e) => {
         e.preventDefault()
 
@@ -41,7 +41,7 @@ const ModalDisciplinas = ({
         if(disciplinaSelecionada) update({...disciplinaSelecionada, ...novaDisciplina})
         else create(novaDisciplina)
     }
-
+    
     return(
         <main className="modal_overlay">
           <div className="modal_container">
@@ -50,6 +50,7 @@ const ModalDisciplinas = ({
             <div className="body_modal">
               <div className="caixa1">
                 <form onSubmit={handleSubmit}>
+                  {console.log(nomeCompleto)}
                   <input type="text" 
                     className="nome_modal"
                     value={nomeCompleto}
