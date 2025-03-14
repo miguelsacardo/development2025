@@ -12,18 +12,18 @@ const ModalDisciplinas = ({
     console.log("disc selecionado: ",disciplinaSelecionada);
     // não quis juntar todos esses useStates em um só pois separando-os permite melhor manipulação de cada um
     const[id, setId] = useState([disciplinaSelecionada?.id || ""])
-    const[nomeCompleto, setNomeCompleto] = useState([disciplinaSelecionada?.nomeCompleto || ""])
+    const[nomeCompleto, setNomeCompleto] = useState([disciplinaSelecionada?.nome_completo || ""])
     const[sigla, setSigla] = useState([disciplinaSelecionada?.sigla || ""])
     const[semestre, setSemestre] = useState([disciplinaSelecionada?.semestre || ""])
-    const[cargaHoraria, setCargaHoraria] = useState([disciplinaSelecionada?.cargaHoraria || ""])
+    const[cargaHoraria, setCargaHoraria] = useState([disciplinaSelecionada?.cargahoraria || ""])
 
     useEffect(()=>{
         if(disciplinaSelecionada){
             setId(disciplinaSelecionada.id || "")
-            setNomeCompleto(disciplinaSelecionada.nomeCompleto || "")
+            setNomeCompleto(disciplinaSelecionada.nome_completo || "")
             setSigla(disciplinaSelecionada.sigla || "")
             setSemestre(disciplinaSelecionada.semestre || "")
-            setCargaHoraria(disciplinaSelecionada.cargaHoraria || "")
+            setCargaHoraria(disciplinaSelecionada.cargahoraria || "")
         }else{
             setId("")
             setNomeCompleto("")
