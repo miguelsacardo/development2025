@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicios Array</title>
+  </head>
+  <body>
+    <script>
+      // //         1. Desenvolva um programa que a partir de um vetor de inteiros com 5 valores inicializados na declaração
+      // //    apresente o dobro de cada valor armazenado.
+      //         window.alert("1. Desenvolva um programa que a partir de um vetor de inteiros com 5 valores inicializados na declaração apresente o dobro de cada valor armazenado.")
+
+      //         // declaracao do vetor
+      //         const vetor_inteiros = [10, 2 , 4, 3, 12]
+
+      //         // map para retornar o dobro de cada numero do array
+      //         const novo_array_inteiros = vetor_inteiros.map(vetor => vetor * 2)
+
+      //         // exibindo
+      //         document.write(novo_array_inteiros)
+
+      // // 2. Desenvolva um programa que a partir de um vetor de inteiros com 8 valores inicializados na declaração
+      // // apresente a média aritméticas desses valores.
+      // window.alert("2. Desenvolva um programa que a partir de um vetor de inteiros com 8 valores inicializados na declaração apresente a média aritméticas desses valores.")
+
+      // // declaracao do vetor
+      // const vetor_inteiros2 = [10, 25, 10, 5, 10, 67, 14, 30]
+
+      // // variavel que vai armazenar a soma de todos os valores
+      // let total = 0
+
+      // // somando todos os valores do array
+      // for(valores of vetor_inteiros2){
+      //     total += valores
+      // }
+
+      // // calculando a media aritmetica dos valores e exibindo na tela
+      // let media_aritmetica = total / vetor_inteiros2.length
+      // document.write(`A media aritmetica do array ${vetor_inteiros2} e ${media_aritmetica}`)
+
+      // // 3. Desenvolva um programa que leia a idade de 20 pessoas e apresente as idades acima da média.
+      // window.alert(`3. Desenvolva um programa que leia a idade de 20 pessoas e apresente as idades acima da média.`)
+
+      // // declarando o contador para o loop while
+      // let contador = 0
+
+      // // valor da soma das idades
+      // let total_idades = 0
+
+      // // array de imagens acima da media
+      // let array_para_filtro = []
+
+      // // media das idades
+      // let media_idades = 0
+
+      // // loop while que pede as idades, calcula a media e armazena as idades em um novo array para depois filtra-lo
+      // while(contador < 20){
+      //     let idades = Number(window.prompt("Digite uma idade!"))
+
+      //     total_idades += idades
+      //     media_idades =  total_idades / 20
+      //     array_para_filtro.push(idades)
+
+      //     contador++
+      // }
+      //  console.log(array_para_filtro)
+      // let filtro_acima_media = array_para_filtro.filter(function(idade_acima){
+      //     return idade_acima > media_idades
+      // })
+      // document.write(`Idades acima da media (${media_idades}): ${filtro_acima_media}`)
+
+      // // 4. Desenvolva um programa que leia 10 números e apresente os valores pares. Caso não tenha nenhum número par apresente a mensagem “Todos os números são ímpares.”
+      // window.alert("4. Desenvolva um programa que leia 10 números e apresente os valores pares. Caso não tenha nenhum número par apresente a mensagem “Todos os números são ímpares.")
+
+      // // contador para loop while
+      // let contador2 = 0
+
+      // // array que vai conter os valores pares
+      // let array_pares = []
+
+      // while(contador2 < 10){
+      //     let valores = Number(window.prompt("Digite um valor!"))
+
+      //     // se achar um valor par, adiciona ele no array de pares
+      //     if(valores % 2 == 0){
+      //         array_pares.push(valores)
+      //     }
+
+      //     contador2++
+      // }
+
+      // // verifica se o array de pares esta vazio e se nao estiver exibe todos os valores pares informados
+      // if(array_pares.length === 0){
+      //     document.write("Todos os numeros sao impares!")
+      // }else{
+      //     document.write(`Valores pares: ${array_pares}`)
+      // }
+
+      // 5. Desenvolva um programa que leia 8 números garantindo que os valores informados estejam entre 100 e 200 (caso não esteja apresente uma mensagem de “valor inválido”). Depois de preenchido apresente os valores armazenados.
+      // window.alert("5. Desenvolva um programa que leia 8 números garantindo que os valores informados estejam entre 100 e 200 (caso não esteja apresente uma mensagem de “valor inválido”). Depois de preenchido apresente os valores armazenados.")
+
+      // // contador para while
+      // let contador3 = 0
+
+      // // array de valores validos
+      // let valores_validos = []
+
+      // // loop while que vai garantir que os valores estejam entre 100 e 200 e se validos, armazena-os num array
+      // while(contador3 < 8){
+      //     let numeros_informados = Number(window.prompt("Informe um numero"))
+
+      //     // checa se o numero e valido e caso seja, faz o push para o array
+      //     if(numeros_informados < 100 || numeros_informados > 200){
+      //         window.alert("Informe um valor valido!")
+      //         continue;
+      //     }else{
+      //         valores_validos.push(numeros_informados)
+      //         contador3++
+      //     }
+      // }
+
+      // document.write(`Valores validos: ${valores_validos}`)
+
+      // // 6. Desenvolva um programa que a partir de um vetor de Strings com 10 nomes inicializados na declaração
+      // // leia um novo nome e verifique se ele está armazenado no vetor, se estiver, apresenta a posição (índice) onde ele está,
+      // // caso contrário, apresente a mensagem “Nome não encontrado!”
+
+      // // vetor de strings
+      // const vetor_strings = ["miguel", "bruno", "fernanda", "gabriel", "julia", "jorge", "gabriela", "lucas", "caio", "carlos"]
+      // const nome_pesquisado = window.prompt("Pesquise um nome!").toLowerCase()
+
+      // for(let i = 0; i < vetor_strings.length; i++){
+      //     if(nome_pesquisado == vetor_strings[i]){
+      //         document.write(`O nome ${nome_pesquisado} esta no indice ${i} do array!`)
+      //         break
+      //     }else if(!vetor_strings.includes(nome_pesquisado)){
+      //         document.write("Nome nao foi encontrado!")
+      //         break
+      //     }
+      // }
+
+      // 7. Desenvolva uma nova versão do programa anterior em que o usuário terá a quantidade de tentativas limitada a 5.
+      // Caso o nome seja encontrado apresente a posição (índice) onde ele está e em qual tentativa ele foi encontrado.
+      // vetor de strings
+
+      
+    </script>
+  </body>
+</html>

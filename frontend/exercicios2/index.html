@@ -218,25 +218,78 @@
         //  Calcular Imposto de Renda (Faixas): Calcule o imposto de renda com base em faixas salariais com arrow function. 
 
         // arrow function
-        const imposto_de_renda = (salario, aliquota_inss, aliquota) => {
-            return (salario - (salario * (100-aliquota_inss)/100)) * aliquota
+        // const imposto_de_renda = (salario, aliquota_inss, aliquota) => {
+        //     return (salario - (salario * (100-aliquota_inss)/100)) * aliquota
+        // }
+        // window.alert("Calcular Imposto de Renda (Faixas): Calcule o imposto de renda com base em faixas salariais com arrow function.")
+
+        // // pedindo o salario do usuario
+        // let salario = Number(window.prompt("Informe o seu salario!"))
+
+        // // pedindo a aliquota do inss ao usuario
+        // let aliquota_inss = Number(window.prompt("Informe a aliquota do inss (em %)"))
+
+        // // aliquota vigente
+        // let aliquota = Number(window.prompt("Informe a aliquota vigente (em %)"))/100
+
+        // if(salario <= 1903.98){
+        //     window.alert("Voce esta isento do imposto de renda!")
+        // }else{
+        //     document.write(imposto_de_renda(salario, aliquota_inss, aliquota).toFixed(2))
+        // }
+
+        // Calcular INSS: Calcule o valor do INSS (contribuição 
+        // para a previdência social) com base em uma alíquota e um salário arrow function.
+        // const calcula_inss = (salario_usuario, aliquota_inss_usuario, parcela_deducao) => {
+        //     return salario_usuario * aliquota_inss_usuario - parcela_deducao
+        // }
+        // window.alert("Calcular INSS: Calcule o valor do INSS (contribuição para a previdência social) com base em uma alíquota e um salário arrow function.")
+
+        // // pedindo o salario do usuario
+        // let salario_usuario = Number(window.prompt("Informe o seu salario!"))
+
+        // // aliquota do inss
+        // let aliquota_inss_usuario = Number(window.prompt("Informe a aliquota do inss! (em %)"))/100
+
+        // // parcela a deduzir
+        // let parcela_deducao = Number(window.prompt("Informe a parcela a deduzir da sua faixa salarial!"))
+
+        // document.write(`O valor do seu INSS e ${calcula_inss(salario_usuario, aliquota_inss_usuario, parcela_deducao)}`)
+
+        // Calcular Juros Compostos: Calcule o valor dos juros compostos sobre um capital inicial.
+        // const juros_compostos = (capital, taxa_juros_anual, tempo_investimento) =>{
+        //     return capital * (1 + taxa_juros_anual) ** tempo_investimento
+        // }
+        // window.alert("Calcular Juros Compostos: Calcule o valor dos juros compostos sobre um capital inicial.")
+
+        // // pedindo capital do usuario
+        // let capital = Number(window.prompt("Informe o capital que sera investido!"))
+
+        // // taxa de juros anual
+        // let taxa_juros_anual = Number(window.prompt("Informe a taxa de juros anual (em %)"))/100
+
+        // // tempo de investimento
+        // let tempo_investimento = Number(window.prompt("Quantos anos voce deixara seu capital investido?"))
+
+        // document.write(`Seu capital ${capital}, investido num periodo de ${tempo_investimento} ano(s) com uma taxa de juros anual de ${taxa_juros_anual} sera um montante de ${juros_compostos(capital, taxa_juros_anual, tempo_investimento).toFixed(2)}`)
+
+        // Simular Financiamento: Calcule o valor das parcelas de um financiamento (use uma fórmula simplificada).
+        const simular_financiamento = (valor_principal, taxa_juros, numero_parcelas) =>{
+            return (valor_principal * taxa_juros * (1 + taxa_juros) ** numero_parcelas) / ((1 + taxa_juros)**numero_parcelas - 1)
         }
-        window.alert("Calcular Imposto de Renda (Faixas): Calcule o imposto de renda com base em faixas salariais com arrow function.")
+        window.alert("Simular Financiamento: Calcule o valor das parcelas de um financiamento (use uma fórmula simplificada).")
 
-        // pedindo o salario do usuario
-        let salario = Number(window.prompt("Informe o seu salario!"))
+        // pedindo o valor total do emprestimo
+        let valor_principal = Number(window.prompt("Informe o valor total do emprestimo!"))
 
-        // pedindo a aliquota do inss ao usuario
-        let aliquota_inss = Number(window.prompt("Informe a aliquota do inss"))
+        // taxa de juros
+        let taxa_juros = Number(window.prompt("Informe a taxa de juros (em %)")) /100
 
-        // aliquota vigente
-        let aliquota = Number(window.prompt("Informe a aliquota vigente"))/100
+        // numero de parcelas
+        let numero_parcelas = Number(window.prompt("Informe a quantidade de parcelas que serao feitas!"))
 
-        if(salario <= 1903.98){
-            window.alert("Voce esta isento do imposto de renda!")
-        }else{
-            document.write(imposto_de_renda(salario, aliquota_inss, aliquota).toFixed(2))
-        }
+        document.write(`Valor da parcela: R$${simular_financiamento(valor_principal, taxa_juros, numero_parcelas).toFixed(2)}`)
+
 
         
     
