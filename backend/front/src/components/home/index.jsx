@@ -113,7 +113,7 @@ export default function Home() {
       );
 
       // o spread ("...") mantém o resto dos registros do banco normalmente e adiciona um novo professor
-      setDados([...dados, novoProfessor]);
+      setDados([...dados, response.data]);
       setModalOpen(false);
       console.log(response);
     } catch (error) {}

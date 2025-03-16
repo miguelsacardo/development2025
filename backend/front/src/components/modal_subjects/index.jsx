@@ -12,10 +12,10 @@ const ModalDisciplinas = ({
     console.log("disc selecionado: ",disciplinaSelecionada);
     // não quis juntar todos esses useStates em um só pois separando-os permite melhor manipulação de cada um
     const[id, setId] = useState([disciplinaSelecionada?.id || ""])
-    const[nomeCompleto, setNomeCompleto] = useState([disciplinaSelecionada?.nome_completo || ""])
+    const[nome_completo, setNomeCompleto] = useState(disciplinaSelecionada?.nome_completo || "")
     const[sigla, setSigla] = useState([disciplinaSelecionada?.sigla || ""])
     const[semestre, setSemestre] = useState([disciplinaSelecionada?.semestre || ""])
-    const[cargaHoraria, setCargaHoraria] = useState([disciplinaSelecionada?.cargahoraria || ""])
+    const[cargahoraria, setCargaHoraria] = useState([disciplinaSelecionada?.cargahoraria || ""])
 
     useEffect(()=>{
         if(disciplinaSelecionada){
@@ -36,7 +36,7 @@ const ModalDisciplinas = ({
     const handleSubmit = (e) => {
         e.preventDefault()
 
-        const novaDisciplina = { nomeCompleto, sigla, semestre, cargaHoraria };
+        const novaDisciplina = { nome_completo, sigla, semestre, cargahoraria };
 
         if(disciplinaSelecionada) update({...disciplinaSelecionada, ...novaDisciplina})
         else create(novaDisciplina)
@@ -50,10 +50,9 @@ const ModalDisciplinas = ({
             <div className="body_modal">
               <div className="caixa1">
                 <form onSubmit={handleSubmit}>
-                  {console.log(nomeCompleto)}
                   <input type="text" 
                     className="nome_modal"
-                    value={nomeCompleto}
+                    value={nome_completo}
                     onChange={(e)=>setNomeCompleto(e.target.value)}
                     placeholder="Nome da disciplina"
                   />
@@ -71,7 +70,7 @@ const ModalDisciplinas = ({
                   />
                   <input type="text" 
                     className="cargahoraria_modal"
-                    value={cargaHoraria}
+                    value={cargahoraria}
                     onChange={(e)=>setCargaHoraria(e.target.value)}
                     placeholder="Carga Horária"
                   />
