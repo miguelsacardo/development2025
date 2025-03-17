@@ -142,9 +142,104 @@
 
       // 7. Desenvolva uma nova versão do programa anterior em que o usuário terá a quantidade de tentativas limitada a 5.
       // Caso o nome seja encontrado apresente a posição (índice) onde ele está e em qual tentativa ele foi encontrado.
-      // vetor de strings
+      // window.alert(
+      //   "Desenvolva uma nova versão do programa anterior em que o usuário terá a quantidade de tentativas limitada a 5. Caso o nome seja encontrado apresente a posição (índice) onde ele está e em qual tentativa ele foi encontrado."
+      // );
 
-      
+      // const vetor_nomes = [
+      //   "miguel",
+      //   "bruno",
+      //   "fernanda",
+      //   "gabriel",
+      //   "julia",
+      //   "jorge",
+      //   "gabriela",
+      //   "lucas",
+      //   "caio",
+      //   "carlos",
+      // ];
+
+      // let tentativas = 5;
+      // let achou = false;
+
+      // while (tentativas > 0 && achou == false) {
+      //   const pesquisa = window.prompt("Pesquise um nome!").toLowerCase();
+
+      //   for (let i = 0; i < vetor_nomes.length; i++) {
+      //     if (pesquisa == vetor_nomes[i]) {
+      //       document.write(`O nome ${pesquisa} esta no indice ${i} do array! Voce encontrou o nome na tentativa ${ 6 - tentativas}`);
+      //       achou = true;
+      //       break;
+      //     }
+      //   }
+      //   if (achou == false) {
+      //     tentativas -= 1;
+      //     window.alert(
+      //       `Nome nao foi encontrado! Voce ainda tem ${tentativas} tentativa(s)`
+      //     );
+
+      //   }
+      // }
+
+      //8. Desenvolva um programa que leia 6 números inteiros e armazene em um vetor A.
+      //  Carregue um vetor B (de mesmo tipo e tamanho) com a metade dos valores armazenados em A.
+      // Apresente os valores dos dois vetores.
+      // window.alert(
+      //   "8. Desenvolva um programa que leia 6 números inteiros e armazene em um vetor A. Carregue um vetor B (de mesmo tipo e tamanho) com a metade dos valores armazenados em A. Apresente os valores dos dois vetores."
+      // );
+
+      // let contador4 = 0
+      // let array_numeros_inteiros = []
+      // while(contador4 < 6){
+      //   let numeros_inteiros = Number(window.prompt("Digite um numero inteiro!"))
+      //   array_numeros_inteiros.push(numeros_inteiros)
+
+      //   contador4++
+      // }
+
+      // let vetor_metade = array_numeros_inteiros.map(metade => metade / 2)
+      // document.write(`Array A: ${array_numeros_inteiros}<br/>`)
+      // document.write(`Array B: ${vetor_metade}`)
+
+      //9. Desenvolva um programa que leia 5 números inteiros e armazene em um vetor A. 
+      // Leia 5 números inteiros e armazene em um vetor B. 
+      // Carregue e apresente um vetor C com os valores de A e B alternados. 
+      window.alert("9. Desenvolva um programa que leia 5 números inteiros e armazene em um vetor A. Leia 5 números inteiros e armazene em um vetor B. Carregue e apresente um vetor C com os valores de A e B alternados. ")
+
+      let contador5 = 0
+      let vetorA = []
+      let vetorB = []
+      let vetorC = []
+      let total = 10 // 5 do vetorA + 5 d vetorB
+
+      while(contador5 < 5){
+        let valores_vetorA = Number(window.prompt("Digite um numero inteiro para o vetor A"))
+        vetorA.push(valores_vetorA)
+        contador5++
+      }
+
+      // reseta o contador
+      contador5 = 0
+
+      while(contador5 < 5){
+        let valores_vetorB = Number(window.prompt("Digite um numero inteiro para o vetor B"))
+        vetorB.push(valores_vetorB)
+        contador5++
+      }
+
+      // intercalando os valores no vetor C
+      for(let i = 0; i < total; i++){
+
+        // pelo codigo estar nessa ordem, ele primeiro adicionara um valor do vetorA e logo em seguida adicionara um valor do vetorB
+        // pela procedencia dos fatores, a intercalacao e gerada
+        if(vetorA[i]) vetorC.push(vetorA[i])
+        if(vetorB[i]) vetorC.push(vetorB[i])
+      } 
+      //Quando o índice i é maior que 4, vetorA[i] e vetorB[i] se tornam undefined, por isso fazemos o "if(vetorA[i])" e "if(vetorB[i])"
+      // isso impede que um valor "undefined" seja adicionado ao vetor C
+
+      document.write(`Vetor C: ${vetorC}`)
+
     </script>
   </body>
 </html>
