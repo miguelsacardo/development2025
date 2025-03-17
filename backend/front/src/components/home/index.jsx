@@ -202,7 +202,7 @@ export default function Home() {
             className="procurar"
             onClick={() => {
               const num = Number(texto);
-              if (typeof num === "number")
+              if (!isNaN(num))
                 searchById(num);
               else
                 search(texto);
