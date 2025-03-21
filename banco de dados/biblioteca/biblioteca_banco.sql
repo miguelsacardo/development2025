@@ -4,8 +4,8 @@ USE biblioteca;
 CREATE TABLE Usuario(
 	id_usuario INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(50) NOT NULL,
-    numero_identificacao INT NOT NULL,
-    email VARCHAR(100),
+    numero_identificacao INT NOT NULL UNIQUE,
+    email VARCHAR(100) UNIQUE,
     data_registro DATE,
     id_nivel INT NOT NULL,
     FOREIGN KEY (id_nivel) REFERENCES Nivel(id_nivel) -- chave estrangeira que ligará o nível do usuario
@@ -13,13 +13,13 @@ CREATE TABLE Usuario(
 
 CREATE TABLE Nivel(
 	id_nivel INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    tipo_nivel VARCHAR(50)
+    tipo_nivel VARCHAR(50) NOT NULL UNIQUE
 );
 
 CREATE TABLE Livro(
 	id_livro INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     titulo VARCHAR(255) NOT NULL,
-    isbn VARCHAR(255),
+    isbn VARCHAR(255) NOT NULL,
     descricao TEXT
 );
 
@@ -51,12 +51,12 @@ CREATE TABLE Categoria_livro(
 
 CREATE TABLE Categoria(
 	id_categoria INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    tipo_categoria VARCHAR(50)
+    tipo_categoria VARCHAR(50) NOT NULL
 );
 
 CREATE TABLE Autor(
 	id_autor INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
-    nome VARCHAR(100),
+    nome VARCHAR(100) NOT NULL,
     data_nascimento DATE, -- accept values in yyyy-mm-dd format
     biografia MEDIUMTEXT
 );
