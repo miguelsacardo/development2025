@@ -75,6 +75,7 @@ export default function Subjects() {
       const response = await axios.post(
         "http://127.0.0.1:8000/api/disciplinas",
         {
+          curso: novaDisciplina.curso,
           nome_completo: novaDisciplina.nome_completo,
           sigla: novaDisciplina.sigla,
           semestre: novaDisciplina.semestre,
@@ -100,10 +101,12 @@ export default function Subjects() {
 
   // atualiza um registro existente. O modal de disciplinas recebe um valor e identifica que é uma atualização
   const update = async (disciplinaAtualizada) => {
+    
     try {
       const response = await axios.put(
         `http://127.0.0.1:8000/api/disciplinas/id/${disciplinaAtualizada.id}`,
         {
+          curso: disciplinaAtualizada.curso,
           nome_completo: disciplinaAtualizada.nome_completo,
           sigla: disciplinaAtualizada.sigla,
           semestre: disciplinaAtualizada.semestre,
@@ -135,6 +138,7 @@ export default function Subjects() {
     <main>
       {disciplinas.map((disciplina) => (
         <div className="content_area" key={disciplina.id}>
+          
           <div>
             <h2>Nome da disciplina: {disciplina.nome_completo}</h2>
           </div>
@@ -146,6 +150,9 @@ export default function Subjects() {
           </div>
           <div>
             <h2>Carga horária: {disciplina.cargahoraria}</h2>
+          </div>
+          <div>
+            <h2>Curso: {disciplina.curso}</h2>
           </div>
 
           <div className="buttons">

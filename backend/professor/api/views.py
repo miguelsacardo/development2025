@@ -82,3 +82,13 @@ class DisciplinasDetailView(RetrieveUpdateDestroyAPIView):
 
     # autenticação para fazer a requisição
     permission_classes = [IsAuthenticated]
+
+
+# exercicio - model de curso 
+class CursosView(ListCreateAPIView):
+    queryset = CadastroCurso.objects.all()
+    serializer_class = CadastroCursoSerializer
+
+class CursosDetailView(RetrieveUpdateDestroyAPIView):
+    queryset = CadastroCurso.objects.all()
+    serializer_class = CadastroCursoSerializer

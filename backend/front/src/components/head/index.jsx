@@ -13,7 +13,7 @@ export default function Head(){
                 <span>Read</span>
                 <span>Update</span>
                 <span>Delete</span>
-                <span><Link to="/subjects">aaaaaaaaaaaaaa</Link></span>
+                <span><Link to="/subjects">Ir para o CRUD de disciplinas</Link></span>
             </div>
         </div>
     )
