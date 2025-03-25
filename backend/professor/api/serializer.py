@@ -14,7 +14,7 @@ class CadastroDisciplinaSerializer(serializers.ModelSerializer):
 
     # isso faz a response da disciplina trazer o nome do curso ao invés da foreign key que representa o curso que cada disciplina tem
     # na prática: curso: 1 vai virar curso:"curso que tem o id 1"
-    curso = serializers.SlugRelatedField(read_only=True, slug_field="nomeCurso")
+    curso = serializers.SlugRelatedField(slug_field="nomeCurso", queryset=CadastroCurso.objects.all())
     class Meta:
         model = CadastroDisciplina
         many = True
