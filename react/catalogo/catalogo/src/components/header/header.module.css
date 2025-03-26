@@ -3,11 +3,17 @@
     justify-content: center;
     align-items: center;
     background-color: rgb(41, 41, 55);
-    height: 150px;
+    height: 80px;
 }
 
 h1{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
+    font-family: "Roboto";
+    font-size: 30px;
     color: red;
+}
+
+.header_content{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
 }

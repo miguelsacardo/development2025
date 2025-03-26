@@ -1,11 +1,14 @@
 .container{
     background-color: #141414;
     padding: 10px;
+    
 }
 
 .container ul{
     display: flex;
-    gap: 20px;
+    justify-content: space-evenly;
+    
     list-style-type: none;
     color: aliceblue;
+    font-family: "Roboto";
 }
