@@ -1,0 +1,11 @@
+.container{
+    background-color: #141414;
+    padding: 10px;
+}
+
+.container ul{
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    color: aliceblue;
+}
