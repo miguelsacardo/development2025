@@ -92,3 +92,8 @@ class CursosView(ListCreateAPIView):
 class CursosDetailView(RetrieveUpdateDestroyAPIView):
     queryset = CadastroCurso.objects.all()
     serializer_class = CadastroCursoSerializer
+
+# exercicio - cadastro de usuário
+class RegisterUserView(ListCreateAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer

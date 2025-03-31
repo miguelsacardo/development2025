@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import AbstractUser
 
 class Cadastro(models.Model):
     ni = models.CharField(max_length=15)
@@ -26,4 +27,3 @@ class CadastroDisciplina(models.Model):
     curso = models.ForeignKey(CadastroCurso, verbose_name="curso que essa disciplina faz parte", on_delete=models.CASCADE, default=1) # o curso será uma foreign key
     semestre = models.IntegerField()
     cargahoraria = models.FloatField()
-

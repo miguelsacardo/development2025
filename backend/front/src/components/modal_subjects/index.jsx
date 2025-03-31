@@ -112,7 +112,7 @@ const ModalDisciplinas = ({
               
 
               <select value={curso} onChange={(e) => setCurso(e.target.value)}>
-                {cursosExistentes.map((cursoExistente) => (
+                {cursosExistentes.map((cursoExistente) => ( 
                   <option value={cursoExistente.nomeCurso}>{cursoExistente.nomeCurso}</option>
                 ))}
               </select>

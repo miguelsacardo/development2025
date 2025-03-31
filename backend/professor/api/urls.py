@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import listar_professores, ProfessoresView, ProfessoresDetailView, buscar_nome_professor, ProfessoresSearchView, DisciplinasView, DisciplinasDetailView, CursosView, CursosDetailView
+from .views import listar_professores, ProfessoresView, ProfessoresDetailView, buscar_nome_professor, ProfessoresSearchView, DisciplinasView, DisciplinasDetailView, CursosView, CursosDetailView, RegisterUserView
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
@@ -25,5 +25,8 @@ urlpatterns = [
     # exercicio - model do curso
     path('cursos', CursosView.as_view()),
     path('cursos/id/<int:pk>', CursosDetailView.as_view()), 
+
+    # exercicio - cadastro de usuário
+    path('usuarios', RegisterUserView.as_view())
 ]
 

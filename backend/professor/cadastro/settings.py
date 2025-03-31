@@ -60,6 +60,7 @@ CORS_ORIGIN_ALLOW_ALL = True # dar uma olhada no site: "https://pypi.org/project
 
 ROOT_URLCONF = 'cadastro.urls'
 
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
