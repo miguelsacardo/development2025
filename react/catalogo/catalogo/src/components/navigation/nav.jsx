@@ -5,7 +5,7 @@ export function Nav() {
     <nav className={estilos.container}>
       <ul>
         <li>Home</li>
-        <li>Filmes</li>
+        <li>Series</li>
         <li>Perfil</li>
       </ul>
     </nav>

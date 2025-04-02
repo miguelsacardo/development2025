@@ -1,7 +1,4 @@
-import estilos from './App.module.css'
-import { Nav } from './components/navigation/nav'
-import { Header } from './components/header/header'
-import { Content } from './components/content/content'
+import { Inicial } from './pages/Inicial'
 
 // todo elemento deve estar dentro de function
 function App() {
@@ -9,9 +6,7 @@ function App() {
 
     // tags fantasmas: são as tags vazias a ponto de permitir a renderização de 2 ou mais elementos html no mesmo componente
     <>
-      <Header />
-      <Nav />
-      <Content />
+      <Inicial/>
     </>
   );
 }
