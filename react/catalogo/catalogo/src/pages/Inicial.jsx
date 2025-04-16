@@ -1,6 +1,6 @@
 import { Nav } from '../components/navigation/nav'
 import { Header } from '../components/header/header'
-import { Content } from '../components/content/content'
+import { Outlet } from 'react-router-dom'
 
 // todo elemento deve estar dentro de function
 export function Inicial() {
@@ -10,7 +10,9 @@ export function Inicial() {
     <>
       <Header />
       <Nav />
-      <Content />
+
+      {/* espaço variável que comporta os componentes da minha aplicação */}
+      <Outlet />
     </>
   );
 }

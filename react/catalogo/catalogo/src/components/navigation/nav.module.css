@@ -12,3 +12,19 @@
     color: aliceblue;
     font-family: "Roboto";
 }
+
+.container ul li{
+    display: flex;
+    align-items: center;
+    color: red;
+    column-gap: 10px;    
+}
+
+nav ul a{
+    text-decoration: none;
+    transition: 0.2s;
+}
+
+nav ul a:hover{
+    transform: scale(1.05);
+}

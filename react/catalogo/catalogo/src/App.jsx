@@ -1,4 +1,6 @@
-import { Inicial } from './pages/Inicial'
+import React from "react";
+import { BrowserRouter } from "react-router-dom";
+import { Rotas } from "./rotas/rotas";
 
 // todo elemento deve estar dentro de function
 function App() {
@@ -6,7 +8,9 @@ function App() {
 
     // tags fantasmas: são as tags vazias a ponto de permitir a renderização de 2 ou mais elementos html no mesmo componente
     <>
-      <Inicial/>
+      <BrowserRouter>
+        <Rotas/>
+      </BrowserRouter>
     </>
   );
 }
