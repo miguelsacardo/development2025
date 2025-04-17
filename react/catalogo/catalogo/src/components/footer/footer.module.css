@@ -1,0 +1,48 @@
+footer{
+    margin-top: 20px;
+}
+
+.container{
+    width: 100%;
+    height: auto;
+    background-color: #292937;
+    padding-top: 10px;
+}
+.container h1{
+    text-align: center;
+}
+.line{
+    border: 1px solid red;
+    width: 50%;
+    justify-self: center;
+    margin-top: 10px;
+}
+
+.icons{
+    margin-top: 10px;
+    color: red;
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+}
+
+.links{
+    margin-top: 10px;
+}
+.links nav{
+    display: flex;
+    justify-content: center;
+    column-gap: 30px;
+    color: red;
+    font-size: 20px;
+}
+
+
+.all_rights{
+    margin-top: 10px;
+    width: 100%;
+    background-color: #1c1c26;
+    color: red;
+    padding: 10px;
+    text-align: center;
+}

@@ -2,7 +2,7 @@ import estilos from "./style.module.css";
 
 export function Profiles() {
   return (
-    <main>
+    <div>
       <div className={estilos.container}>
         <div className={estilos.card}>
           <div>
@@ -52,6 +52,6 @@ export function Profiles() {
           <h1>Pessoa 4</h1>
         </div>
       </div>
-    </main>
+      </div>
   );
 }

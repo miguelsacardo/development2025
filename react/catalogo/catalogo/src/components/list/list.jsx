@@ -4,7 +4,7 @@ import { Card } from "../card/Card";
 import estilos from "./List.module.css"
 import { Modal } from "../modal/modal";
 
-const API_KEY = '';
+const API_KEY = 'ec3395fea8fb915a53942b6d960146c3';
 const API_URL = 'https://api.themoviedb.org/3';
 
 export function List(){
