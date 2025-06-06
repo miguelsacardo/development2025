@@ -8,11 +8,16 @@
 SET GLOBAL event_scheduler = ON;
 
 DELIMITER $$
-CREATE EVENT IF NOT EXISTS EnviarRelatorioNotas
-ON SCHEDULE EVERY '1' DAY STARTS '08:00:00' ON COMPLETION PRESERVE ENABLE
+CREATE EVENT EnviarRelatorioNotas
+ON SCHEDULE EVERY 1 MINUTE ON COMPLETION PRESERVE ENABLE
 DO
 BEGIN
-	SELECT * FROM nota WHERE curdate() - 1;
-    INSERT INTO LogAlteracoes(descricao) VALUES
+	INSERT INTO LogAlteracoes(descricao) values (concat("Relatório de notas do dia ", curdate() - INTERVAL 1 DAY , " foi gerado e enviado às 08:00"));
+END $$
+DELIMITER ;
+drop event EnviarRelatorioNotas;
+SELECT * FROM LogAlteracoes;
+
+    
     
     
