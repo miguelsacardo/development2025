@@ -3,6 +3,8 @@ import { TrashIcon } from "../icons/TrashIcon";
 import type { Id, Task } from "../types";
 import { useSortable } from "@dnd-kit/sortable";
 import { CSS } from "@dnd-kit/utilities";
+import { CheckIcon } from "../icons/CheckIcon";
+import { PencilIcon } from "../icons/PencilIcon";
 
 interface Props {
     task: Task;
@@ -75,7 +77,9 @@ export function TaskCard({ task, deleteTask, updateTask }: Props) {
                     id="" />
 
                 {/* colocar icon aqui */}
-                <button onClick={() => toggleEditMode()}>V</button>
+                <button onClick={() => toggleEditMode()} className="hover:cursor-pointer">
+                    <CheckIcon />
+                </button>
             </div>
         )
     }
@@ -97,11 +101,16 @@ export function TaskCard({ task, deleteTask, updateTask }: Props) {
             </p>
 
             {mouseIsOver && (
-                <button
-                    onClick={() => deleteTask(task.id)}
-                    className="stroke-white absolute right-4 top-1/2-translate-y-1/2 bg-columnBackgroundColor p-2 rounded opacity-60 hover:opacity-100">
-                    <TrashIcon />
-                </button>
+                <div className="flex">
+                    <button className="stroke-white right-4 top-1/2-translate-y-1/2 bg-columnBackgroundColor p-2 rounded opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <PencilIcon/>
+                    </button>
+                    <button
+                        onClick={() => deleteTask(task.id)}
+                        className="stroke-white right-4 top-1/2-translate-y-1/2 bg-columnBackgroundColor p-2 rounded opacity-60 hover:opacity-100 hover:cursor-pointer">
+                        <TrashIcon />
+                    </button>
+                </div>
             )}
 
         </div>

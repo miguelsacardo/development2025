@@ -5,6 +5,7 @@ import { CSS } from "@dnd-kit/utilities";
 import { useMemo, useState } from "react";
 import { PlusIcon } from "../icons/PlusIcon";
 import { TaskCard } from "./TaskCard";
+import { PencilIcon } from "../icons/PencilIcon";
 
 // interface para as props que serão passadas ao componente ColumnContainer
 interface Props {
@@ -59,8 +60,8 @@ export function ColumnContainer(props: Props) {
             className="bg-mainBackgroundColor text-md h-[60px] cursor-grab rounded-md rounded-b-none p-3 font-bold border-columnBackgroundColor border-4 flex items-center justify-between"
         >
             <div className="flex gap-2">
-                <div className="flex justify-center items-center bg-columnBackgroundColor px-2 py-1 text-sm rounded-full">0</div>
-                {!editMode && column.title}
+                <div className="flex justify-center items-center bg-columnBackgroundColor px-2 py-1 text-sm rounded-full">{tasks.length}</div>
+                {!editMode && (column.title)} <PencilIcon />
                 {editMode && 
                 <input 
                 className="bg-black focus:border-rose-500 border rounded outline-none px-2"
@@ -71,11 +72,12 @@ export function ColumnContainer(props: Props) {
                 onKeyDown={e => {
                     if(e.key !== "Enter") return;
                     setEditMode(false);
-                }}/>}
+                }}/>
+                }
             </div>
             <button
                 onClick={() => deleteColumn(column.id)}
-                className="stroke-gray-500 hover:stroke-white hover:bg-columnBackgroundColor rounded px-1 py-2">
+                className="stroke-gray-500 hover:stroke-white hover:bg-columnBackgroundColor rounded px-1 py-2 hover:cursor-pointer">
                 <TrashIcon />
             </button>
         </div>
@@ -90,7 +92,7 @@ export function ColumnContainer(props: Props) {
         
         <button 
         onClick={() => createTask(column.id)}
-        className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black"
+        className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black hover:cursor-pointer"
         >
             <PlusIcon /> 
             Adicionar task
