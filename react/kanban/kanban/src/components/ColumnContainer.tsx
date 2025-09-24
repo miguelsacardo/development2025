@@ -24,6 +24,8 @@ export function ColumnContainer(props: Props) {
     const [editMode, setEditMode] = useState(false);
     const tasksIds = useMemo(() => {return tasks.map(task => task.id)}, [tasks])
 
+    const [colTitle, setColTitle] = useState(column.title)
+
     const { setNodeRef, attributes, listeners, transform, transition, isDragging } = useSortable(
         {
             id: column.id,
@@ -65,17 +67,19 @@ export function ColumnContainer(props: Props) {
                 {editMode && 
                 <input 
                 className="bg-black focus:border-rose-500 border rounded outline-none px-2"
-                value={column.title} 
-                onChange={e => updateColumn(column.id, e.target.value)} 
+                value={colTitle} 
+                onChange={(e) => setColTitle(e.target.value)} 
                 autoFocus 
                 onBlur={() => setEditMode(false)} 
                 onKeyDown={e => {
                     if(e.key !== "Enter") return;
                     setEditMode(false);
+                    updateColumn(column.id, colTitle)
                 }}/>
                 }
             </div>
             <button
+                aria-label="Excluir coluna"
                 onClick={() => deleteColumn(column.id)}
                 className="stroke-gray-500 hover:stroke-white hover:bg-columnBackgroundColor rounded px-1 py-2 hover:cursor-pointer">
                 <TrashIcon />
@@ -91,6 +95,7 @@ export function ColumnContainer(props: Props) {
         </div>
         
         <button 
+        aria-label="Adicionar Task"
         onClick={() => createTask(column.id)}
         className="flex gap-2 items-center border-columnBackgroundColor border-2 rounded-md p-4 border-x-columnBackgroundColor hover:bg-mainBackgroundColor hover:text-rose-500 active:bg-black hover:cursor-pointer"
         >

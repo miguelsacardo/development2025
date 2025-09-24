@@ -1,9 +1,10 @@
 import './App.css'
+import { Header } from './components/Header'
 import { KanbanBoard } from './components/KanbanBoard'
 
 function App() {
   return(
-    <KanbanBoard />
+    <><Header /><KanbanBoard /></>
   )
 }
 
