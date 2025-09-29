@@ -17,10 +17,12 @@ export function Menu() {
                 </li>
                 
                 <li>
-                    <figure>
+                    <Link to = 'inventario'>
+                        <figure>
                         <img src={bau} alt="Inventário. Ícone de baú." />
                         <figcaption>Inventário</figcaption>
                     </figure>
+                    </Link>
                     
                 </li>
                 <li>

@@ -1,0 +1,51 @@
+@use './variaveis' as *;
+
+.inventario{
+    padding: 2rem;
+    text-align: center;
+    color: $claro;
+    min-height: 100vh;
+
+    .inventario h2{
+        margin-bottom: 1.5rem;
+        font-size: 2rem;
+    }
+
+    .vazio{
+        font-size: 1.2rem;
+        color: $claro;
+    }
+
+    .grid{
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+        justify-items: center;
+
+        .figurinha{
+            background: $claro;
+            border-radius: 12px;
+            padding: 1rem;
+            box-shadow: $box-fundo;
+            width: 100%;
+            max-width: 150px;
+            color: $fundo;
+        }
+
+        img{
+            width: 100%;
+            max-width: 100px;
+            margin-bottom: 0.5rem;
+
+        }
+
+        p{
+            font-weight: bold;
+            font-size: 1rem;
+        }
+
+        figcaption{
+            font-size: 14px;
+        }
+    }
+}
