@@ -1,28 +1,28 @@
 @use './variaveis' as *;
 
-.inventario{
+.inventario {
     padding: 2rem;
     text-align: center;
     color: $claro;
     min-height: 100vh;
 
-    .inventario h2{
+    .inventario h2 {
         margin-bottom: 1.5rem;
         font-size: 2rem;
     }
 
-    .vazio{
+    .vazio {
         font-size: 1.2rem;
         color: $claro;
     }
 
-    .grid{
+    .grid {
         display: grid;
         gap: 1rem;
         grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
         justify-items: center;
 
-        .figurinha{
+        .figurinha {
             background: $claro;
             border-radius: 12px;
             padding: 1rem;
@@ -32,20 +32,37 @@
             color: $fundo;
         }
 
-        img{
+        img {
             width: 100%;
             max-width: 100px;
             margin-bottom: 0.5rem;
 
         }
 
-        p{
+        p {
             font-weight: bold;
             font-size: 1rem;
         }
 
-        figcaption{
+        figcaption {
             font-size: 14px;
         }
+
+    }
+
+    .cardFigurinha {
+        background-color: $card;
+        color: #222;
+        border-radius: 16px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+        padding: 1.5rem;
+        min-height: 220px;
+        font-size: 18px;
     }
 }
+
