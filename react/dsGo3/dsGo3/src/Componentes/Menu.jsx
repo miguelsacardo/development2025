@@ -31,13 +31,13 @@ export function Menu() {
                         <figcaption>GeoLocalização</figcaption>
                     </figure>
                 </li>
-                 <li>
-                    
-                    <figure>
-                        <img src={camera} alt="camera. Ícone de máquina fotográfica." />
-                        <figcaption>Camera</figcaption>
-                    </figure>
-                    
+                 <li>  
+                    <Link to = 'foto'>
+                        <figure>
+                            <img src={camera} alt="camera. Ícone de máquina fotográfica." />
+                            <figcaption>Camera</figcaption>
+                        </figure>
+                    </Link>
                 </li>
             </ul>
         </div>
